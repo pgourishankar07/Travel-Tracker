@@ -25,3 +25,9 @@ SELECT *
 FROM visited_countries
 JOIN users
 ON users.id = user_id;
+
+CREATE TABLE countries (
+    id SERIAL PRIMARY KEY,
+    country_code VARCHAR(2),
+    country_name VARCHAR(100)
+);

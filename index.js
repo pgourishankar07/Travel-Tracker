@@ -5,12 +5,9 @@ import pg from "pg";
 const app = express();
 const port = 3000;
 
-const db = new pg.Client({
-  host: "localhost",
-  user: "gourishankar",
-  port: 5432,
-  password: "123123",
-  database: "bunty",
+const db = new pg.Pool({
+  connectionString:
+    "postgres://default:qSPInMR50Qdo@ep-solitary-firefly-a1tbgvck-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require?sslmode=require",
 });
 
 db.connect();
